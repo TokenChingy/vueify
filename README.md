@@ -26,7 +26,7 @@ A Python3/Binary script to convert `.html` structure into `.vue` structure recur
 1. Open Bootstrap Studio.
 2. Open the **Export Settings** dialogue.
 3. Expand the **Advanced** area.
-4. Browser and selct the `vueify` binary.
+4. Browse and select the `vueify` binary.
 5. Run your export as normal.
 
 ### Standalone (Python3)
