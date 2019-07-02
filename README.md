@@ -1,6 +1,6 @@
 # Vueify
 
-A Python3/Binary script to convert `.html` structure into `.vue` structure.
+A Python3/Binary script to convert `.html` structure into `.vue` structure recursively in a directory.
 
 ## Table of Contents
 
@@ -43,7 +43,9 @@ A Python3/Binary script to convert `.html` structure into `.vue` structure.
 
 ## Example
 
-If the `.vue` does not exist, it will create a new one, else it will only replace the `<template></template>` contents.
+If the `.vue` does not exist, it will create a new one, else it will only replace the `<template></template>` contents. Not all files will work – if there are unknown encodings, vueify will fail.
+
+**Note**: Currently vueify does not remove `<script></script>` tags from the `.html` file.
 
 `example.html`:
 
