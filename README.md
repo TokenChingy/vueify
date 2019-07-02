@@ -43,7 +43,10 @@ A Python3/Binary script to convert `.html` structure into `.vue` structure.
 
 ## Example
 
+If the `.vue` does not exist, it will create a new one, else it will only replace the `<template></template>` contents.
+
 `example.html`:
+
 ```html
 <html>
   <head>
@@ -59,6 +62,7 @@ A Python3/Binary script to convert `.html` structure into `.vue` structure.
 ```
 
 `example.vue`:
+
 ```html
 <!-- HTML -->
 <template>
