@@ -1,17 +1,17 @@
 # Vueify
 
-A Python3/Binary script to convert `.html` structure into `.vue` structure recursively in a directory.
+A Python3/Binary script to convert `.html`, and `.css` structure into `.vue` structure recursively in a directory.
 
 ## Table of Contents
 
-- [Vueify](#Vueify)
-  - [Table of Contents](#Table-of-Contents)
-  - [Compilation](#Compilation)
-  - [Usage](#Usage)
-    - [Bootstrap Studio](#Bootstrap-Studio)
-    - [Standalone (Python3)](#Standalone-Python3)
-    - [Standalone (Binary)](#Standalone-Binary)
-  - [Example](#Example)
+- [Vueify](#vueify)
+  - [Table of Contents](#table-of-contents)
+  - [Compilation](#compilation)
+  - [Usage](#usage)
+    - [Bootstrap Studio](#bootstrap-studio)
+    - [Standalone (Python3)](#standalone-python3)
+    - [Standalone (Binary)](#standalone-binary)
+  - [Example](#example)
 
 ## Compilation
 
@@ -45,8 +45,6 @@ A Python3/Binary script to convert `.html` structure into `.vue` structure recur
 
 If the `.vue` does not exist, it will create a new one, else it will only replace the `<template></template>` contents. Not all files will work – if there are unknown encodings, vueify will fail.
 
-**Note**: Currently vueify does not remove `<script></script>` tags from the `.html` file.
-
 `example.html`:
 
 ```html
@@ -61,6 +59,18 @@ If the `.vue` does not exist, it will create a new one, else it will only replac
     </div>
   </body>
 </html>
+```
+
+`./assets/css/example.css`
+
+```css
+.a {
+  color: red;
+}
+
+.b > .a {
+  color: blue;
+}
 ```
 
 `example.vue`:
@@ -78,5 +88,12 @@ export default {}
 </script>
 <!-- CSS -->
 <style scoped="">
+.a {
+  color: red;
+}
+
+.b > .a {
+  color: blue;
+}
 </style>
 ```
